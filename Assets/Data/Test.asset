@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d48f69fff241254381637c0863c64b4, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  Title: TEST
+  TextSegments:
+  - Title: "\u041A\u043B\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u0442\u0435\u043A\u0441\u0442 Lorem Ipsum"
+    Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+      in culpa qui officia deserunt mollit anim id est laborum.
+  - Title: "\u0410\u0431\u0437\u0430\u0446 1.10.32 \"de Finibus Bonorum et Malorum"
+    Text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+      veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+      ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+      consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+      porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+      velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+      magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+      ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? '
+  - Title: "\u0410\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u0438\u0439 \u043F\u0435\u0440\u0435\u0432\u043E\u0434
+      1914 \u0433\u043E\u0434\u0430, H. Rackham"
+    Text: But I must explain to you how all this mistaken idea of denouncing pleasure
+      and praising pain was born and I will give you a complete account of the system,
+      and expound the actual teachings of the great explorer of the truth, the master-builder
+      of human happiness. No one rejects, dislikes, or avoids pleasure itself, because
+      it is pleasure, but because those who do not know how to pursue pleasure rationally
+      encounter consequences that are extremely painful. Nor again is there anyone
+      who loves or pursues or desires to obtain pain of itself, because it is pain,
+      but because occasionally circumstances occur in which toil and pain can procure
+      him some great pleasure. To take a trivial example, which of us ever undertakes
+      laborious physical exercise, except to obtain some advantage from it?
+  Questions:
+  - Text: 5 + 5
+    Answer: 10
+    BadAnswers:
+    - 11
+    - 7
+    - 55
+  - Text: 7 + 15
+    Answer: 22
+    BadAnswers:
+    - 157
+    - 20
+    - 17
+  - Text: 9 + 18
+    Answer: 27
+    BadAnswers:
+    - 37
+    - 36
+    - 26
+  - Text: 81 / 3
+    Answer: 27
+    BadAnswers:
+    - 9
+    - 39
+    - 3
+  - Text: 3 * 5
+    Answer: 15
+    BadAnswers:
+    - 3
+    - 5
+    - 35
+  CoinReward: 100
+  StarsReward: 500
