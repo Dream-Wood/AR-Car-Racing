@@ -34,6 +34,7 @@ public class RacingEngine : MonoBehaviour
     public void Initialize(QuestData dq)
     {
         data = dq;
+        select = 0;
         testForm.SetActive(false);
         BindingBtn();
         

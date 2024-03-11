@@ -17,12 +17,15 @@ public class Racing : MonoBehaviour
     private void Start()
     {
         finish.SetActive(false);
+        pos = transform.position;
     }
 
     public void Initialize()
     {
         finish.SetActive(false);
-        pos = transform.position;
+        result.DOFade(0, 0.5f);
+        playerCar.transform.localPosition = Vector3.zero;
+        enemyCar.transform.localPosition = Vector3.zero;
         ongoing = true;
     }
 
@@ -64,6 +67,11 @@ public class Racing : MonoBehaviour
         sq.Append(transform.DOMoveX(finish.transform.position.x, 2f).SetEase(Ease.Linear));
         sq.AppendCallback(() => result.DOFade(1, 0.5f));
         sq.Append(transform.DOMoveX(finish.transform.position.x - 20, 1f).SetEase(Ease.OutQuart));
+        sq.AppendCallback(() =>
+        {
+            playerCar.transform.localPosition = Vector3.zero;
+            enemyCar.transform.localPosition = Vector3.zero;
+        });
     }
 }
 

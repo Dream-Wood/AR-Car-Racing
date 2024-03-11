@@ -44,7 +44,9 @@ public class LearnEngine : MonoBehaviour
     public void Initialize(QuestData qd)
     {
         quest = qd;
+        select = 0;
         ButtonValid();
+        UpdateText();
     }
 
     private void UpdateText()
