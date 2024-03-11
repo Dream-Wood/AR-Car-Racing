@@ -1,17 +1,27 @@
 ﻿using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Racing : MonoBehaviour
 {
     [SerializeField] private GameObject enemyCar;
     [SerializeField] private GameObject playerCar;
+    
+    [SerializeField] private GameObject finish;
+    [SerializeField] private Image result;
 
     private Vector3 pos;
     private bool ongoing;
 
+    private void Start()
+    {
+        finish.SetActive(false);
+    }
+
     public void Initialize()
     {
+        finish.SetActive(false);
         pos = transform.position;
         ongoing = true;
     }
@@ -46,6 +56,14 @@ public class Racing : MonoBehaviour
     public void Finish()
     {
         ongoing = false;
+        ScreenManager.instance.OpenScreen(5);
+        transform.position = pos - (Vector3.left * 50);
+        finish.SetActive(true);
+
+        Sequence sq = DOTween.Sequence();
+        sq.Append(transform.DOMoveX(finish.transform.position.x, 2f).SetEase(Ease.Linear));
+        sq.AppendCallback(() => result.DOFade(1, 0.5f));
+        sq.Append(transform.DOMoveX(finish.transform.position.x - 20, 1f).SetEase(Ease.OutQuart));
     }
 }
 
