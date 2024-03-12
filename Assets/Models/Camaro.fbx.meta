@@ -1,9 +1,54 @@
 fileFormatVersion: 2
-guid: e821165c4a10e054f841f68147aed935
+guid: 7373d656f67b17d4fb385497b9028352
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car2.001
+    second: {fileID: 2100000, guid: 3377ef6ae52dff14a892ae2ed9a50a33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Disk
+    second: {fileID: 2100000, guid: 0a98b01c76e229041926e7eafa788bcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DopColor
+    second: {fileID: 2100000, guid: d7df31e28ed8e22429359574ce798867, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: cccade4ff72ffe74495b7650dec0b10e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 3be0583c0c6e54249b2c1a0b62b2d393, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 251bcf0775b88ae42a6feb9d2ba00ebf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RedLight
+    second: {fileID: 2100000, guid: aca8d5b2f623c8f41ac698da6588b322, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Resin
+    second: {fileID: 2100000, guid: fd0de7524f4ddb64ba7b91c298511053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteLights
+    second: {fileID: 2100000, guid: 609632282bd32d44098b5f5e512fefed, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -90,7 +135,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0175
+    globalScale: 1.75
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class Racing : MonoBehaviour
 {
     [SerializeField] private GameObject enemyCar;
+    [SerializeField] private CarEngine enemyCarEngine;
     [SerializeField] private GameObject playerCar;
+    [SerializeField] private CarEngine playerCarEngine;
+    [SerializeField] private ParticleSystem aitStream;
     
     [SerializeField] private GameObject finish;
     [SerializeField] private Image result;
@@ -18,6 +21,7 @@ public class Racing : MonoBehaviour
     {
         finish.SetActive(false);
         pos = transform.position;
+        aitStream.Stop();
     }
 
     public void Initialize()
@@ -27,6 +31,9 @@ public class Racing : MonoBehaviour
         playerCar.transform.localPosition = Vector3.zero;
         enemyCar.transform.localPosition = Vector3.zero;
         ongoing = true;
+        aitStream.Play();
+        enemyCarEngine.StartEngine();
+        playerCarEngine.StartEngine();
     }
 
     private void Update()
@@ -38,9 +45,9 @@ public class Racing : MonoBehaviour
 
         transform.position -= Vector3.right * Time.deltaTime * 30;
 
-        if (transform.position.x <= -50)
+        if (transform.position.x <= -150)
         {
-            transform.position = pos - (Vector3.left * 50);
+            transform.position = pos - (Vector3.left * 150);
         }
     }
 
@@ -62,6 +69,7 @@ public class Racing : MonoBehaviour
         ScreenManager.instance.OpenScreen(5);
         transform.position = pos - (Vector3.left * 50);
         finish.SetActive(true);
+        aitStream.Stop();
 
         Sequence sq = DOTween.Sequence();
         sq.Append(transform.DOMoveX(finish.transform.position.x, 2f).SetEase(Ease.Linear));
@@ -69,6 +77,8 @@ public class Racing : MonoBehaviour
         sq.Append(transform.DOMoveX(finish.transform.position.x - 20, 1f).SetEase(Ease.OutQuart));
         sq.AppendCallback(() =>
         {
+            enemyCarEngine.StopEngine();
+            playerCarEngine.StopEngine();
             playerCar.transform.localPosition = Vector3.zero;
             enemyCar.transform.localPosition = Vector3.zero;
         });
