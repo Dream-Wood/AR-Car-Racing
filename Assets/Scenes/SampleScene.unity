@@ -7607,7 +7607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCar: {fileID: 559892874}
+  enemyCarEngine: {fileID: 1600168769}
   playerCar: {fileID: 462631515}
+  playerCarEngine: {fileID: 2107121745}
   aitStream: {fileID: 752662583}
   finish: {fileID: 1955903766}
   result: {fileID: 244472293}
@@ -60116,6 +60118,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597435745}
   m_CullTransparentMesh: 1
+--- !u!114 &1600168769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7838775389888660332, guid: 868138c206fe53c4e96d86f6f4461a4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1971476601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080fff9e1afa01e41b49112e4527ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1601123485
 GameObject:
   m_ObjectHideFlags: 0
@@ -79561,6 +79575,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134d80d5c8257d94abe84d7e4c5cbe0e, type: 3}
+--- !u!114 &2107121745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7838775389888660332, guid: 868138c206fe53c4e96d86f6f4461a4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 450811936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080fff9e1afa01e41b49112e4527ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2111575462
 GameObject:
   m_ObjectHideFlags: 0
