@@ -33,11 +33,13 @@ public class RaycastPlacer : MonoBehaviour
                 if (!isSpawned)
                 {
                     spawnedObject = Instantiate(prefab, pos.position, pos.rotation);
+                    spawnedObject.transform.localScale = Vector3.one / 10f;
                     isSpawned = true;
                 }
                 else
                 {
                     spawnedObject.transform.position = pos.position;
+                    spawnedObject.transform.localScale = Vector3.one / 10f;
                 }
             }
         }
