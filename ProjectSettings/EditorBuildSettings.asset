@@ -5,7 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/AR Car.unity
+    guid: fb080dc98ee615a43aebffbd2a369ffe
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: c97b1aaaa2e6e54429d48bf12c65fd9b,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: b181fbca96cc945408a5a75f4ec8afa1,
+      type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: bbfa4628f3c1fe84283c4f3a97c87acd,
+      type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 03599a287d0ce29438e9749e9824c8e5,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d60eb4124cf3fb0418245aa34994d379,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: a14ba9236de0f8c4ba5c2684b9babe5a,
+      type: 2}
