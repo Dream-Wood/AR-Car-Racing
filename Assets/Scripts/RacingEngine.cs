@@ -42,6 +42,7 @@ public class RacingEngine : MonoBehaviour
         sq.Append(numbers.DOText("1", 1f));
         sq.Append(numbers.DOText("GO", 0.01f));
         sq.AppendCallback(OnGoing);
+        StartEnemyBrain();
     }
 
     void OnGoing()
@@ -89,6 +90,21 @@ public class RacingEngine : MonoBehaviour
         select++;
         racing.MoveCar(CarType.Player);
         BindingBtn();
+    }
+
+    void StartEnemyBrain()
+    {
+        Sequence sq = DOTween.Sequence();
+        sq.AppendInterval(5f);
+        sq.AppendCallback(() => racing.MoveCar(CarType.Enemy));
+        sq.AppendInterval(5f);
+        sq.AppendCallback(() => racing.MoveCar(CarType.Enemy));
+        sq.AppendInterval(5f);
+        sq.AppendCallback(() => racing.MoveCar(CarType.Enemy));
+        sq.AppendInterval(5f);
+        sq.AppendCallback(() => racing.MoveCar(CarType.Enemy));
+        sq.AppendInterval(5f);
+        sq.AppendCallback(() => racing.MoveCar(CarType.Enemy));
     }
 
     void Error()

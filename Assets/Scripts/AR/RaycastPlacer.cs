@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,12 @@ using UnityEngine.XR.ARSubsystems;
 
 public class RaycastPlacer : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab;
-    private GameObject spawnedObject;
+    public event Action OnSpawned;
 
-    private bool isSpawned;
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject spawnedObject;
+    
+    [SerializeField] private bool isSpawned;
 
     private ARRaycastManager arRaycastManager;
 
@@ -39,7 +42,7 @@ public class RaycastPlacer : MonoBehaviour
                 else
                 {
                     spawnedObject.transform.position = pos.position;
-                    spawnedObject.transform.localScale = Vector3.one / 10f;
+                    OnSpawned?.Invoke();
                 }
             }
         }
