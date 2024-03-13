@@ -8,6 +8,7 @@ public class GameCore : MonoBehaviour
 {
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         DOTween.Init();
     }
 

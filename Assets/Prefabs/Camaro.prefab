@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080fff9e1afa01e41b49112e4527ff17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CarName: 
   axisA: {fileID: 5916058954217024283}
   axisB: {fileID: 6026780264380015611}
 --- !u!1001 &1017995812440437034
@@ -112,6 +113,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 7f74b7647ab3e4f47986e2da6035b1bf, type: 2}
+    - target: {fileID: -7918335002988649766, guid: 7373d656f67b17d4fb385497b9028352,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 67ae98773a5aa1a4baab9655d8af500b, type: 2}
     - target: {fileID: 919132149155446097, guid: 7373d656f67b17d4fb385497b9028352,
         type: 3}
       propertyPath: m_Name

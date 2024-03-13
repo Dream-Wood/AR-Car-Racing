@@ -49,6 +49,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: WhiteLights
     second: {fileID: 2100000, guid: 609632282bd32d44098b5f5e512fefed, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: medved11
+    second: {fileID: 2800000, guid: 425d5b7526c30214e88e7d985c398370, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
