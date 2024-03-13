@@ -7,6 +7,7 @@ using UnityEngine;
 public class ScreenManager : MonoBehaviour
 {
     public static ScreenManager instance = null;
+    public bool useCameras;
 
     [SerializeField] private List<GameScreen> screens = new List<GameScreen>();
     private int select = 0;
@@ -27,7 +28,11 @@ public class ScreenManager : MonoBehaviour
         foreach (var s in screens)
         {
             s.UI.SetActive(false);
-            s.Camera.Priority = 0;
+            
+            if (useCameras)
+            {
+                s.Camera.Priority = 0;
+            }
         }
 
         OpenScreen(0);
@@ -37,13 +42,17 @@ public class ScreenManager : MonoBehaviour
     {
         select = id;
         screens[last].UI.SetActive(false);
-        screens[last].Camera.Priority = 0;
 
+        if (useCameras)
+        {
+            screens[last].Camera.Priority = 0;
+            screens[select].Camera.Priority = 100;
+        }
+        
         screens[select].UI.SetActive(true);
-        screens[select].Camera.Priority = 100;
         last = id;
     }
-    
+
     public void GoBack()
     {
         OpenScreen(screens[select].Owner);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LearnEngine : MonoBehaviour
@@ -11,6 +12,7 @@ public class LearnEngine : MonoBehaviour
     [SerializeField] private Button next;
     [SerializeField] private Button back;
     [SerializeField] private Button ready;
+    [SerializeField] private Button ar;
     
     [SerializeField] private TMP_Text title;
     [SerializeField] private TMP_Text text;
@@ -35,9 +37,9 @@ public class LearnEngine : MonoBehaviour
             UpdateText();
         });
         
-        ready.onClick.AddListener(() =>
+        ar.onClick.AddListener(() =>
         {
-            Debug.Log("READY!");
+            SceneManager.LoadSceneAsync(1);
         });
     }
 
@@ -63,11 +65,13 @@ public class LearnEngine : MonoBehaviour
         {
             next.gameObject.SetActive(false);
             ready.gameObject.SetActive(true);
+            ar.gameObject.SetActive(true);
         }
         else
         {
             next.gameObject.SetActive(true);
             ready.gameObject.SetActive(false);
+            ar.gameObject.SetActive(false);
         }
     }
 }
