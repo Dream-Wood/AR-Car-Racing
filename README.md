@@ -36,4 +36,7 @@
 
 ## Files
 [Основная папка для презентации, там можно найти видео?](https://drive.google.com/drive/folders/1eEaLmyy1bZEoiSpS9sLTdUyK0duXJ2_A?usp=sharing)
+
 [Дополнитеьные файлы](https://drive.google.com/drive/folders/1MhioJNCxB93a62FJZCFRl26M_muvKg35?usp=sharing)
+
+[APK](https://github.com/Dream-Wood/AR-Car-Racing/releases)
