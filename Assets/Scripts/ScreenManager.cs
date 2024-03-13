@@ -52,9 +52,36 @@ public class ScreenManager : MonoBehaviour
         screens[select].UI.SetActive(true);
         last = id;
     }
+    
+    public void OpenScreen(ScreenTypes t)
+    {
+        last = select;
+        screens[last].UI.SetActive(false);
+        
+        for (int i = 0; i < screens.Count; i++)
+        {
+            if (screens[i].type == t)
+            {
+                select = i;
+            }
+        }
+
+        if (useCameras)
+        {
+            screens[last].Camera.Priority = 0;
+            screens[select].Camera.Priority = 100;
+        }
+        
+        screens[select].UI.SetActive(true);
+    }
 
     public void GoBack()
     {
+        if (select == screens[select].Owner && select == 0)
+        {
+            Application.Quit();
+        }
+        
         OpenScreen(screens[select].Owner);
     }
 }

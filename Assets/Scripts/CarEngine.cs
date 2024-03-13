@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CarEngine : MonoBehaviour
 {
+    public String CarName;
     [SerializeField] private Transform axisA;
     [SerializeField] private Transform axisB;
 

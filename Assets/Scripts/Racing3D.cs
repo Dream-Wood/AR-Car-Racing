@@ -68,7 +68,7 @@ public class Racing3D : Racing
     public override void Finish()
     {
         ongoing = false;
-        ScreenManager.instance.OpenScreen(5);
+        ScreenManager.instance.OpenScreen(ScreenTypes.Finish);
         transform.position = pos - (Vector3.left * 50);
         finish.SetActive(true);
         aitStream.Stop();

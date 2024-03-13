@@ -10,5 +10,6 @@ namespace DefaultNamespace
         public GameObject UI;
         public CinemachineVirtualCamera Camera;
         public int Owner;
+        public ScreenTypes type;
     }
 }

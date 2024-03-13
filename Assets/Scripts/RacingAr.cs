@@ -67,7 +67,7 @@ public class RacingAr : Racing
 
     private void FinishRacing()
     {
-        ScreenManager.instance.OpenScreen(2);
+        ScreenManager.instance.OpenScreen(ScreenTypes.Finish);
         result.DOFade(1, .5f);
         enemyCarEngine.StopEngine();
         playerCarEngine.StopEngine();
@@ -77,7 +77,7 @@ public class RacingAr : Racing
 
     public override void Finish()
     {
-        ScreenManager.instance.OpenScreen(2);
+        ScreenManager.instance.OpenScreen(ScreenTypes.Finish);
     }
 
     public void GoMenu()
