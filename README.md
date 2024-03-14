@@ -39,6 +39,6 @@
 
 [Дополнитеьные файлы](https://drive.google.com/drive/folders/1MhioJNCxB93a62FJZCFRl26M_muvKg35?usp=sharing)
 
-[APK](https://github.com/Dream-Wood/AR-Car-Racing/releases
+[APK](https://github.com/Dream-Wood/AR-Car-Racing/releases)
 
 [Figma](https://www.figma.com/file/BMqnmmRnQ7Ib6C8iRExYJB/Hack2.0?type=design&node-id=0%3A1&mode=design&t=ZbtM8BhBGgi9MMao-1)
