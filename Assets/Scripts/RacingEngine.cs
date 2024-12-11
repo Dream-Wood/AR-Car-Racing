@@ -36,6 +36,8 @@ public class RacingEngine : MonoBehaviour
         testForm.SetActive(false);
         BindingBtn();
         
+        racing.PreInitialize();
+        
         Sequence sq = DOTween.Sequence();
         sq.Append(numbers.DOText("3", 1f));
         sq.Append(numbers.DOText("2", 1f));

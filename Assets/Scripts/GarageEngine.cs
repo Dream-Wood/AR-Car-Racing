@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -18,6 +19,10 @@ public class GarageEngine : MonoBehaviour
 
     [SerializeField] private TMP_Text title;
     [SerializeField] private TMP_Text driveText;
+    
+    [SerializeField] private Racing dRacing;
+
+    private int selectCar = 0;
 
     private int select;
 
@@ -37,6 +42,15 @@ public class GarageEngine : MonoBehaviour
             ButtonValid();
         });
 
+        drive.onClick.AddListener(() =>
+        { 
+            var car = garage.GetCarById(select);
+            dRacing.SelectCar(car);
+            selectCar = select;
+            ScreenManager.instance.GoBack();
+        });
+        
+
         ar.onClick.AddListener(() => { SceneManager.LoadSceneAsync(2); });
         
         ButtonValid();
@@ -52,14 +66,19 @@ public class GarageEngine : MonoBehaviour
         if (select == 0)
         {
             drive.interactable = true;
-            driveText.text = "Выбрана";
-            ar.interactable = true;
+            driveText.text = "Выбрать";
+            ar.interactable = false;
         }
         else
         {
-            drive.interactable = false;
-            driveText.text = "Заблокировано";
+            drive.interactable = true;
+            driveText.text = "Выбрать";
             ar.interactable = false;
         }
+    }
+
+    private void OnDisable()
+    {
+        garage.SelectCar(selectCar);
     }
 }

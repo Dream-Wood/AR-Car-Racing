@@ -4,6 +4,7 @@ using DefaultNamespace;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Racing3D : Racing
 {
@@ -15,6 +16,8 @@ public class Racing3D : Racing
     
     [SerializeField] private GameObject finish;
     [SerializeField] private Image result;
+    
+    [SerializeField] private Garage garage;
 
     private Vector3 pos;
     private bool ongoing;
@@ -24,6 +27,26 @@ public class Racing3D : Racing
         finish.SetActive(false);
         pos = transform.position;
         aitStream.Stop();
+    }
+
+    public override void PreInitialize()
+    {
+        if (enemyCar != null)
+        {
+            Destroy(enemyCarEngine.gameObject);
+        }
+        enemyCarEngine = Instantiate(garage.GetRandomCar(), enemyCar.transform).GetComponent<CarEngine>();
+        
+        enemyCarEngine.gameObject.SetActive(true);
+        
+        enemyCarEngine.StopEngine();
+        playerCarEngine.StopEngine();
+        
+        playerCar.transform.localPosition = Vector3.zero;
+        enemyCar.transform.localPosition = Vector3.zero;
+        
+        playerCarEngine.transform.localPosition = new Vector3(2.5f,0,0);
+        enemyCarEngine.transform.localPosition = new Vector3(-2.5f,0,0);
     }
 
     public override void Initialize()
@@ -51,6 +74,15 @@ public class Racing3D : Racing
         {
             transform.position = pos - (Vector3.left * 150);
         }
+    }
+
+    public override void SelectCar(GameObject car)
+    {
+        if (playerCarEngine != null)
+        {
+            Destroy(playerCarEngine.gameObject);
+        }
+        playerCarEngine = Instantiate(car, playerCar.transform).GetComponent<CarEngine>();
     }
 
     public override void MoveCar(CarType type)

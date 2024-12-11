@@ -17,9 +17,19 @@ public class Garage: MonoBehaviour
         SelectCar(0);
     }
 
+    public GameObject GetRandomCar()
+    {
+        return cars[UnityEngine.Random.Range(0, cars.Count)].gameObject;
+    }
+
     public int GetCarsCount()
     {
         return cars.Count;
+    }
+
+    public GameObject GetCarById(int i)
+    {
+        return cars[i].gameObject;
     }
 
     public string SelectCar(int id)

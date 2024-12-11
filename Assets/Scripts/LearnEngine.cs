@@ -53,8 +53,14 @@ public class LearnEngine : MonoBehaviour
 
     private void UpdateText()
     {
-        title.DOText(quest.TextSegments[select].Title, .5f);
-        text.DOText(quest.TextSegments[select].Text, .5f);
+        var sequence1 = DOTween.Sequence();
+        var sequence2 = DOTween.Sequence();
+        sequence1.Append(title.DOFade(0, 0));
+        sequence2.Append(text.DOFade(0, 0));
+        title.text = quest.TextSegments[select].Title;
+        text.text = quest.TextSegments[select].Text;
+        sequence1.Append(title.DOFade(1f, 0.5f));
+        sequence2.Append(text.DOFade(1f, 0.5f));
     }
 
     private void ButtonValid()
