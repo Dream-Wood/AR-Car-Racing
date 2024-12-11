@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR Car Drive.unity
     guid: 03591745fe622fc40b61c1579f22b3ca
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR Car.unity
     guid: fb080dc98ee615a43aebffbd2a369ffe
   m_configObjects:
@@ -27,3 +27,4 @@ EditorBuildSettings:
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: a14ba9236de0f8c4ba5c2684b9babe5a,
       type: 2}
+  m_UseUCBPForAssetBundles: 0
